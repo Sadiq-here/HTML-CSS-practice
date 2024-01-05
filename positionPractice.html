@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.0.1/remixicon.css"
+      integrity="sha512-ZH3KB6wI5ADHaLaez5ynrzxR6lAswuNfhlXdcdhxsvOUghvf02zU1dAsOC6JrBTWbkE1WNDNs5Dcfz493fDMhA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Position practice</title>
   </head>
   <body style="height: 3000px; padding-top: 60px; padding-left: 90px">
@@ -16,9 +23,29 @@
         left: 0;
         right: 0;
         z-index: 100; /* when we position an element relative and it is below of an element we want on top it seems to come up even from a element which is floating on the window so we use higher z-index to the element we want to keep on the most top*/
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
       "
     >
       Header
+      <div style="position: relative">
+        <i class="ri-notification-2-fill"></i>
+        <div
+          style="
+            background-color: red;
+            color: white;
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 8px;
+            padding: 1px 3px;
+            border-radius: 10px;
+          "
+        >
+          3
+        </div>
+      </div>
     </header>
     <div
       style="
