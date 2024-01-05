@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Position practice</title>
+  </head>
+  <body style="height: 3000px; padding-top: 60px">
+    <!-- we have added padding top in the body so that the header does not cover our content -->
+    <header
+      style="
+        background-color: black;
+        color: white;
+        height: 50px;
+        /* margin-bottom: 10px; margin bottom dosent work here because the header is floating on the window */
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+      "
+    >
+      Header
+    </header>
+    <div style="background-color: lightblue; height: 200px; width: 200px">
+      Div 1
+    </div>
+    <div style="background-color: lightpink; height: 200px; width: 200px">
+      Div 2
+    </div>
+  </body>
+</html>
