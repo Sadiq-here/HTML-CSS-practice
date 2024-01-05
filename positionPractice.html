@@ -15,6 +15,7 @@
         top: 0;
         left: 0;
         right: 0;
+        z-index: 100; /* when we position an element relative and it is below of an element we want on top it seems to come up even from a element which is floating on the window so we use higher z-index to the element we want to keep on the most top*/
       "
     >
       Header
@@ -31,12 +32,41 @@
       "
     >
       Sidebar
+      <div
+        style="
+          background-color: red;
+          color: white;
+          position: absolute; /* This div has been positioned absolute of a div with position fixed, so when we position this element it moves according/wr to its fixed parent and stays fixed as well like its parent element*/
+          top: 0;
+          right: 0;
+        "
+      >
+        X
+      </div>
     </div>
     <div style="background-color: lightblue; height: 200px; width: 200px">
       Div 1
     </div>
-    <div style="background-color: lightpink; height: 200px; width: 200px">
+    <div
+      style="
+        background-color: lightpink;
+        height: 200px;
+        width: 200px;
+        position: relative;
+      "
+    >
       Div 2
+      <div
+        style="
+          background-color: black;
+          color: white;
+          position: absolute; /*when we psotion an element absolute whose parent is position: relative; the child element positions according to its parent and behaves like a normal element, we just have to be aware that its parent with relative position  might come above all the other floating element, that is why we use higher z-index for the elements we want on the most top*/
+          bottom: 5px;
+          right: 5px;
+        "
+      >
+        5:00
+      </div>
     </div>
   </body>
 </html>
